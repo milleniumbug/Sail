@@ -33,7 +33,10 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="ComfyUi\" />
+      <None Remove="ComfyUi\HistoryResponse.json" />
+      <EmbeddedResource Include="ComfyUi\HistoryResponse.json" />
+      <None Remove="ComfyUi\QueueResponse.json" />
+      <EmbeddedResource Include="ComfyUi\QueueResponse.json" />
     </ItemGroup>
 
 </Project>

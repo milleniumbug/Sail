@@ -1,11 +1,23 @@
+using System.Net.Http.Json;
 using System.Net.WebSockets;
 using System.Text.Json;
+using System.Web;
 using Microsoft.Extensions.Logging;
+using Sail.ComfyUi.Models;
+using TupleAsJsonArray;
 
 namespace Sail.ComfyUi;
 
 public class ComfyUiClient
 {
+    private static readonly JsonSerializerOptions options = new JsonSerializerOptions
+    {
+        Converters =
+        {
+            new TupleConverterFactory()
+        }
+    };
+    
     private readonly HttpClient httpClient;
     private readonly ILogger<ComfyUiClient> logger;
     private readonly ClientWebSocket? webSocket;
@@ -54,7 +66,7 @@ public class ComfyUiClient
 
         var response = await this.httpClient.PostAsync(url, multipart);
         response.EnsureSuccessStatusCode();
-        var result = await JsonSerializer.DeserializeAsync<UploadResponse>(await response.Content.ReadAsStreamAsync())
+        var result = await JsonSerializer.DeserializeAsync<UploadResponse>(await response.Content.ReadAsStreamAsync(), options)
                      ?? throw new JsonException();
         return result;
     }
@@ -69,20 +81,42 @@ public class ComfyUiClient
         return await UploadCommon("upload/mask", name, stream);
     }
 
-    public async Task Prompt(JsonDocument json)
+    public async Task<PromptResponse> Prompt(PromptRequest request)
     {
         string url = "/prompt";
-        
+        var jsonContent = JsonContent.Create(request, options: options);
+        var response = await this.httpClient.PostAsync(url, jsonContent);
+        response.EnsureSuccessStatusCode();
+        var result = await JsonSerializer.DeserializeAsync<PromptResponse>(await response.Content.ReadAsStreamAsync(), options)
+                     ?? throw new JsonException("null response");
+        return result;
     }
 
-    public async Task GetQueue()
+    public async Task<QueueResponse> GetQueue()
     {
         string url = "/queue";
         var response = await this.httpClient.GetAsync(url);
+        response.EnsureSuccessStatusCode();
+        var result = await JsonSerializer.DeserializeAsync<QueueResponse>(await response.Content.ReadAsStreamAsync(), options)
+                     ?? throw new JsonException("null response");
+        return result;
     }
     
-    public async Task GetHistory()
+    public async Task<HistoryResponse> GetHistory(int maxItems)
     {
-        
+        string url = $"/queue?max_items={maxItems}";
+        var response = await this.httpClient.GetAsync(url);
+        response.EnsureSuccessStatusCode();
+        var result = await JsonSerializer.DeserializeAsync<HistoryResponse>(await response.Content.ReadAsStreamAsync(), options)
+                     ?? throw new JsonException("null response");
+        return result;
+    }
+    
+    public async Task<Stream> ViewFile(Resource resource)
+    {
+        string url = $"/view?filename={HttpUtility.UrlEncode(resource.Filename)}&subfolder={HttpUtility.UrlEncode(resource.Subfolder)}&type={HttpUtility.UrlEncode(resource.Type)}";
+        var response = await this.httpClient.GetAsync(url);
+        response.EnsureSuccessStatusCode();
+        return await response.Content.ReadAsStreamAsync();
     }
 }
