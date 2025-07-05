@@ -11,4 +11,6 @@ public struct Size2D
         Width = width;
         Height = height;
     }
+    
+    public static Size2D Square(int width) => new Size2D(width, width);
 }
