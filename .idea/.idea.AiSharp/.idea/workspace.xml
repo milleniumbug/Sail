@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="62edd1f2-ab76-47ba-b926-4ac06ae287f9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.ComfyUi/ComfyUiClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.ComfyUi/PromptRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.ComfyUi/QueueEntry.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.ComfyUi/QueueResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.ComfyUi/Sail.ComfyUi.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.ComfyUi/UploadResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.Common/Point2D.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.Common/Rectangle2D.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.Common/Sail.Common.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.Common/Size2D.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.Darknet/Sail.Darknet.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.Darknet/YoloWrapper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.LibreTranslate/LibreTranslateClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.LibreTranslate/LibreTranslateQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.LibreTranslate/LibreTranslateResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.LibreTranslate/Sail.LibreTranslate.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.LibreTranslate/swagger.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.Oobabooga/Models/ChatChoice.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.Oobabooga/Models/ChatCompletionBody.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.Oobabooga/Models/ChatMessage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.Oobabooga/OobaboogaClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.Oobabooga/Sail.Oobabooga.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.SugoiSuite/MangaRikaiOcrClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.SugoiSuite/Request.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.SugoiSuite/Sail.SugoiSuite.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.SugoiSuite/SugoiOfflineTranslatorClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.Tests/Sail.Tests.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sail.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SailSharp.Automatic1111/Models/AlwaysOnScripts.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SailSharp.Automatic1111/Models/Comments.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SailSharp.Automatic1111/Models/ImageToImageRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SailSharp.Automatic1111/Models/ImageToImageResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SailSharp.Automatic1111/Models/InterrogateRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SailSharp.Automatic1111/Models/InterrogateResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SailSharp.Automatic1111/Models/OverrideSettings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SailSharp.Automatic1111/Models/TextToImageRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SailSharp.Automatic1111/Models/TextToImageResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SailSharp.Automatic1111/SailSharp.Automatic1111.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/global.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Sail.ComfyUi/ComfyUiClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Sail.ComfyUi/PromptRequest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Sail.ComfyUi/PromptResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Sail.ComfyUi/QueueEntry.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Sail.ComfyUi/QueueResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Sail.ComfyUi/UploadResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Sail.Common/Point2D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Sail.Common/Rectangle2D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Sail.Common/Size2D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Sail.Darknet/YoloWrapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Sail.Oobabooga/OobaboogaClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Sail.SugoiSuite/MangaRikaiOcrClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Sail.SugoiSuite/SugoiOfflineTranslatorClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Sail.Tests/GlobalUsings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Sail.Tests/UnitTest1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SailSharp.Automatic1111/Automatic1111Client.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SailSharp.Automatic1111/Models/AlwaysOnScripts.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SailSharp.Automatic1111/Models/Comments.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SailSharp.Automatic1111/Models/ImageToImageRequest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SailSharp.Automatic1111/Models/ImageToImageResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SailSharp.Automatic1111/Models/InterrogateRequest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SailSharp.Automatic1111/Models/InterrogateResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SailSharp.Automatic1111/Models/OverrideSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SailSharp.Automatic1111/Models/TextToImageRequest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SailSharp.Automatic1111/Models/TextToImageResponse.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2zSBKz3T9MsbGpDM13i5bf2oc3K" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="62edd1f2-ab76-47ba-b926-4ac06ae287f9" name="Changes" comment="" />
+      <created>1751714534164</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751714534164</updated>
+      <workItem from="1751714535366" duration="2770000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+</project>
