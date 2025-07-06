@@ -23,7 +23,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\SailSharp.Automatic1111\SailSharp.Automatic1111.csproj" />
+      <ProjectReference Include="..\Sail.Automatic1111\Sail.Automatic1111.csproj" />
       <ProjectReference Include="..\Sail.ComfyUi\Sail.ComfyUi.csproj" />
       <ProjectReference Include="..\Sail.Common\Sail.Common.csproj" />
       <ProjectReference Include="..\Sail.Darknet\Sail.Darknet.csproj" />

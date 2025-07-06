@@ -14,7 +14,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sail.Darknet", "Sail.Darkne
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sail.SugoiSuite", "Sail.SugoiSuite\Sail.SugoiSuite.csproj", "{53AB7632-A08F-4FDB-BAED-2315208FA70D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SailSharp.Automatic1111", "SailSharp.Automatic1111\SailSharp.Automatic1111.csproj", "{A9C2B10B-9CB9-4602-8E22-AA4BF0010F7C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sail.Automatic1111", "Sail.Automatic1111\Sail.Automatic1111.csproj", "{A9C2B10B-9CB9-4602-8E22-AA4BF0010F7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
