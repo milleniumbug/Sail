@@ -1,6 +1,7 @@
 using System.Net.Http.Json;
 using System.Net.WebSockets;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Web;
 using Microsoft.Extensions.Logging;
 using Sail.ComfyUi.Models;
@@ -12,6 +13,7 @@ public class ComfyUiClient
 {
     private static readonly JsonSerializerOptions options = new JsonSerializerOptions
     {
+        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
         Converters =
         {
             new TupleConverterFactory()
@@ -19,11 +21,11 @@ public class ComfyUiClient
     };
     
     private readonly HttpClient httpClient;
-    private readonly ILogger<ComfyUiClient> logger;
+    private readonly ILogger<ComfyUiClient>? logger;
     private readonly ClientWebSocket? webSocket;
     private string ClientId { get; } = Guid.NewGuid().ToString();
 
-    public ComfyUiClient(HttpClient httpClient, ILogger<ComfyUiClient> logger)
+    public ComfyUiClient(HttpClient httpClient, ILogger<ComfyUiClient>? logger = null)
     {
         if (httpClient.BaseAddress == null)
         {
@@ -53,7 +55,7 @@ public class ComfyUiClient
     private async Task<UploadResponse> UploadCommon(string url, string name, Stream stream)
     {
         var multipart = new MultipartFormDataContent();
-        multipart.Add(new StreamContent(stream), "file", name);
+        multipart.Add(new StreamContent(stream), "image", name);
         multipart.Add(new StringContent("true"), "overwrite");
         multipart.Add(new StringContent("input"), "type");
         if (false)
@@ -84,6 +86,11 @@ public class ComfyUiClient
     public async Task<PromptResponse> Prompt(PromptRequest request)
     {
         string url = "/prompt";
+        /*if (request.ClientId == null)
+        {
+            request = request with { ClientId = this.ClientId };
+        }*/
+        
         var jsonContent = JsonContent.Create(request, options: options);
         var response = await this.httpClient.PostAsync(url, jsonContent);
         response.EnsureSuccessStatusCode();
@@ -104,7 +111,7 @@ public class ComfyUiClient
     
     public async Task<HistoryResponse> GetHistory(int maxItems)
     {
-        string url = $"/queue?max_items={maxItems}";
+        string url = $"/history?max_items={maxItems}";
         var response = await this.httpClient.GetAsync(url);
         response.EnsureSuccessStatusCode();
         var result = await JsonSerializer.DeserializeAsync<HistoryResponse>(await response.Content.ReadAsStreamAsync(), options)
